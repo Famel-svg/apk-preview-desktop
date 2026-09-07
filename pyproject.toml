@@ -1,0 +1,43 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "apk-preview-desktop"
+version = "0.1.0"
+description = "Desktop APK preview and local MCP controller"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "mcp>=1.26,<3",
+  "pydantic>=2.10,<3",
+  "PySide6>=6.8,<7",
+]
+
+[project.scripts]
+apk-preview-desktop = "apk_preview.desktop:main"
+apk-preview-mcp = "apk_preview.mcp_server:main"
+
+[dependency-groups]
+dev = [
+  "pyinstaller>=6.10,<7",
+  "pytest>=8.3,<10",
+  "pyright>=1.1.400",
+  "ruff>=0.11,<1",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/apk_preview"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+exclude = [".venv", "07_DRAFTS", "99_ARCHIVE"]
+
+[tool.pyright]
+pythonVersion = "3.12"
+typeCheckingMode = "strict"
+include = ["src"]

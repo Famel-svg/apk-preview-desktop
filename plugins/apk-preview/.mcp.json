@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "apk-preview": {
+      "command": "uv",
+      "args": ["run", "--project", "../..", "apk-preview-mcp"]
+    }
+  }
+}

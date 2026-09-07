@@ -1,0 +1,25 @@
+{
+  "name": "apk-preview",
+  "version": "0.1.0",
+  "description": "Run, inspect, and navigate Android APKs in a dedicated local emulator.",
+  "author": {
+    "name": "Rafael"
+  },
+  "keywords": ["android", "apk", "emulator", "visual-testing"],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "APK Preview",
+    "shortDescription": "Preview and control APKs locally",
+    "longDescription": "Install APKs in a dedicated Android emulator, inspect screens, switch device profiles, and navigate through Codex.",
+    "developerName": "Rafael",
+    "category": "Developer Tools",
+    "capabilities": ["Read", "Write", "Interactive"],
+    "defaultPrompt": [
+      "Diagnostique meu ambiente Android.",
+      "Instale este APK e mostre a tela atual.",
+      "Revise o app em celular compacto e tablet."
+    ],
+    "brandColor": "#6D5EF7"
+  }
+}
